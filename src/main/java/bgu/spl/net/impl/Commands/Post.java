@@ -1,8 +1,9 @@
 package bgu.spl.net.impl.Commands;
 
+import bgu.spl.net.api.Visitor;
 import javafx.util.Pair;
 
-public class Post extends Command {
+public class Post extends CommandCS {
 
     private static final short Opcode=5;
     private Pair<String, String> content;
@@ -10,8 +11,9 @@ public class Post extends Command {
         super("Post");
         this.content=content;
     }
+
     @Override
-    public void process() {
+    public void accept(Visitor visitor) {
 
     }
 }

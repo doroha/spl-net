@@ -1,6 +1,6 @@
 package bgu.spl.net.impl.Commands;
 
-public class Notification extends Command {
+public class Notification extends CommandSC {
 
     private static final short Opcode=9;
 
@@ -13,8 +13,5 @@ public class Notification extends Command {
         this.postingUser=postingUser;
         this.content=content;
     }
-    @Override
-    public void process() {
 
-    }
 }

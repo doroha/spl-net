@@ -1,6 +1,8 @@
 package bgu.spl.net.impl.Commands;
 
-public class Stat extends Command {
+import bgu.spl.net.api.Visitor;
+
+public class Stat extends CommandCS {
 
     private static final short Opcode=8;
     private String username;
@@ -8,9 +10,9 @@ public class Stat extends Command {
         super("Stat");
         this.username=username;
     }
+
     @Override
-    public void process() {
+    public void accept(Visitor visitor) {
 
     }
-
 }

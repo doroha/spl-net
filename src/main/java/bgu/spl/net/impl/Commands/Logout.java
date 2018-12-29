@@ -1,15 +1,17 @@
 package bgu.spl.net.impl.Commands;
 
-public class Logout extends Command {
+import bgu.spl.net.api.Visitor;
+
+public class Logout extends CommandCS {
 
     private static final short Opcode= 3;
 
     public Logout(){
         super("Logout");
     }
+
     @Override
-    public void process() {
+    public void accept(Visitor visitor) {
 
     }
-
 }

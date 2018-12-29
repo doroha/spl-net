@@ -1,6 +1,6 @@
 package bgu.spl.net.impl.Commands;
 
-public class ACK extends Command {
+public class ACK extends CommandSC {
 
 
     private static final short Opcode=10;
@@ -8,8 +8,5 @@ public class ACK extends Command {
         super("ACK");
     }
 
-    @Override
-    public void process() {
 
-    }
 }

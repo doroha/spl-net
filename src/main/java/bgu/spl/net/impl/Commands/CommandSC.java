@@ -1,12 +1,11 @@
 package bgu.spl.net.impl.Commands;
 
-public abstract class Command {
+public class CommandSC {  //Abstract Class for Server-Client Commands
 
     private String name;
 
-    public Command(String name){
+    public CommandSC(String name){
         this.name=name;
     }
-    public abstract void process();
     public String getName(){return this.name;}
 }

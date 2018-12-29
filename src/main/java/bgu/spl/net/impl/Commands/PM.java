@@ -1,19 +1,22 @@
 package bgu.spl.net.impl.Commands;
 
-public class PM extends Command {
+import bgu.spl.net.api.Visitor;
+
+public class PM extends CommandCS {
     private static final short Opcode=6;
     private String username;
     private String content;
 
     public PM(String username, String content){
-        super("Command");
+        super("CommandCS");
         this.content=content;
         this.username=username;
 
 
     }
+
     @Override
-    public void process() {
+    public void accept(Visitor visitor) {
 
     }
 }

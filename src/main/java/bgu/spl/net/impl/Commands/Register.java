@@ -1,6 +1,8 @@
 package bgu.spl.net.impl.Commands;
 
-public class Register extends Command {
+import bgu.spl.net.api.Visitor;
+
+public class Register extends CommandCS {
     private static final short Opcode=1;
     private String username;
     private String password;
@@ -10,8 +12,9 @@ public class Register extends Command {
         this.username=username;
         this.password=password;
     }
+
     @Override
-    public void process() {
+    public void accept(Visitor visitor) {
 
     }
 }

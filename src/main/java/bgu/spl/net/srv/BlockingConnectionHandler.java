@@ -9,7 +9,7 @@ import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 
-public class BlockingConnectionHandler<T> implements Runnable, ConnectionHandler<T> {
+public class BlockingConnectionHandler<T> implements Runnable, ConnectionHandler<T> {  //for the server
 
     private final ConnectionsImpl connections;
     private final BidiMessagingProtocol<T> protocol;
@@ -66,6 +66,5 @@ public class BlockingConnectionHandler<T> implements Runnable, ConnectionHandler
                 e.printStackTrace();
             }
         }
-        //TODO- how to return the response after encoding.
     }
 }

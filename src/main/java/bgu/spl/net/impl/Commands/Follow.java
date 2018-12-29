@@ -1,8 +1,10 @@
 package bgu.spl.net.impl.Commands;
 
+import bgu.spl.net.api.Visitor;
+
 import java.util.List;
 
-public class Follow extends Command {
+public class Follow extends CommandCS {
 
 
     private static final short Opcode=4;
@@ -16,7 +18,7 @@ public class Follow extends Command {
         this.userNameList=userNameList;
     }
     @Override
-    public void process() {
+    public void accept(Visitor visitor) {
 
     }
 }
